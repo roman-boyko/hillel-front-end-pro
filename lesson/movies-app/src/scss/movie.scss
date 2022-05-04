@@ -1,0 +1,48 @@
+@import "mixins.scss";
+@import "colors.scss";
+
+.movie {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  position: relative;
+
+  .title {
+    margin-bottom: 5px;
+  }
+
+  .popularity {
+    margin-bottom: 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: $white;
+    padding: 5px;
+    border: 1px solid $black;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .rate {
+      font-size: 10px;
+    }
+  }
+
+  .poster {
+    width: 100%;
+    margin-bottom: 10px;
+    transition: box-shadow .3s;
+  }
+
+  @include tablet {
+    width: calc(25% - 15px);
+    margin-right: 15px;
+
+    &:nth-last-col {
+      margin-right: 0;
+    }
+  }
+}

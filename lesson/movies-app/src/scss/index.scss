@@ -1,6 +1,7 @@
 @import "~normalize.css";
-@import "roboto.scss";
-
-* {
-  font-family: 'Roboto', sans-serif;
-}
+@import "fonts.scss";
+@import "mixins.scss";
+@import "global.scss";
+@import "header.scss";
+@import "footer.scss";
+@import "movie.scss";

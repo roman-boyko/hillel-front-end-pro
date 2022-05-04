@@ -1,4 +1,5 @@
-// api
-import './api';
+import {getMovies} from "./api";
 
-console.log('main.js');
+getMovies('popular', '.popular');
+getMovies('top_rated', '.top-rated');
+getMovies('upcoming', '.upcoming');

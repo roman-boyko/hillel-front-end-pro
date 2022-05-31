@@ -1,10 +1,10 @@
-import Todos from "./components/Todos";
+import InvoicesExample from './pages/InvoicesExample';
 
 import './App.css';
 
 const App = () => (
   <div className="App">
-    <Todos/>
+    <InvoicesExample/>
   </div>
 );
 

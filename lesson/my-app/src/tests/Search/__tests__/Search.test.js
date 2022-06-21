@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 
-import Search from "./Search";
+import Search from "../Search";
 
 // tips
 /*
@@ -36,20 +36,8 @@ Search variants:
 - getByLabelText          - queryByLabelText          - findByLabelText
 - getByPlaceholderText    - queryByPlaceholderText    - findByPlaceholderText
 - getByAltText            - queryByAltText            - findByAltText
-- getByDisplayValue       - queryByDisplayValue       - findByDisplayValue
+- getByDisplayValue       - queryByDisplayValue       - findByDisplayValu e
 - getAllBy                - queryAllBy                - findAllBy
-*/
-
-/*
-Assertive Functions:
-- toBeDisabled            - toBeEnabled               - toBeEmpty
-- toBeEmptyDOMElement     - toBeInTheDocument         - toBeInvalid
-- toBeRequired            - toBeValid                 - toBeVisible
-- toContainElement        - toContainHTML             - toHaveAttribute
-- toHaveClass             - toHaveFocus               - toHaveFormValues
-- toHaveStyle             - toHaveTextContent         - toHaveValue
-- toHaveDisplayValue      - toBeChecked               - toBePartiallyChecked
-- toHaveDescription
 */
 // tips - end
 
@@ -88,9 +76,8 @@ describe("Search", () => {
     expect(screen.getByLabelText(/search/i)).toHaveAttribute("id");
   });
 
-  it("fireEvent", async () => {
+  it("fireEvent", () => {
     render(<Search />);
-    await screen.findByText(/Logged in as/i);
     expect(screen.queryByText(/Searches for React/)).toBeNull();
     fireEvent.change(screen.getByRole("textbox"), {
       target: { value: "React" },

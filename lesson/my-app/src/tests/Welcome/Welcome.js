@@ -16,7 +16,7 @@ const Welcome = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn React lorem
         </a>
       </header>
     </div>

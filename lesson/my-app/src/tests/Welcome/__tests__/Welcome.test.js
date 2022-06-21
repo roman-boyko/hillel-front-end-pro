@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 
-import Welcome from "./Welcome";
+import Welcome from "../Welcome";
 
 test("renders learn react link", () => {
   const { getByText } = render(<Welcome />);
